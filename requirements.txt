@@ -1,0 +1,17 @@
+# Giao diện người dùng
+streamlit
+
+# Framework xử lý AI và RAG
+langchain
+langchain-community
+langchain-google-genai
+
+# Xử lý file PDF và văn bản
+pypdf
+tiktoken
+
+# Cơ sở dữ liệu Vector (Bộ nhớ)
+chromadb
+
+# Quản lý biến môi trường (Bảo mật .env)
+python-dotenv
