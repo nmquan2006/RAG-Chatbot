@@ -11,6 +11,7 @@ pypdf
 tiktoken
 
 # Cơ sở dữ liệu Vector (Bộ nhớ)
+langchain-chroma
 chromadb
 
 # Quản lý biến môi trường (Bảo mật .env)
