@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -5,6 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from src.database import load_vector_database
 
 
+load_dotenv()
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
 
 system_prompt = (
