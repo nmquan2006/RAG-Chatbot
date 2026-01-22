@@ -7,7 +7,7 @@ from src.database import load_vector_database
 
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
 
-system_promp = (
+system_prompt = (
     "Bạn là một trợ lý thông minh chuyên trả lời câu hỏi dựa trên thông tin được cung cấp."
     "Hãy sử dụng những thông tin sau để trả lời câu hỏi."
     "Nếu không có thông tin phù hợp trong tài liệu được cung cấp, hãy trả lời 'Tôi không biết', đừng tự ý bịa câu trả lời."
@@ -18,7 +18,7 @@ system_promp = (
 
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", system_promp),
+        ("system", system_prompt),
         ("user", "{question}"),
     ]
 )
