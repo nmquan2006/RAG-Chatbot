@@ -8,17 +8,15 @@ from langchain_chroma import Chroma
 load_dotenv()
 
 db_path= "vector_db"
-
 embedding_model = "models/embedding-001"
 EMBEDDING = GoogleGenerativeAIEmbeddings(model=embedding_model)
-
-
 
 def load_vector_database():
     if not os.path.exists(db_path):
         print(f"Error! Can not find folder: {db_path}\n")
         return None
     return Chroma(persist_directory=db_path, embedding_function=EMBEDDING)
+
 
 def hash_ids(chunks):
     ids = []
@@ -28,6 +26,7 @@ def hash_ids(chunks):
         unique_id = f"{content}-p{page}"
         ids.append(unique_id)
     return ids
+
 
 def add_to_vector_db(chunks, folder_path=db_path):
     
